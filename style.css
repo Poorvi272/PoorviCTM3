@@ -171,13 +171,5 @@ button {
   }
 }
 
-/* ======================================
-   FIRST VIDEO — NO CROP, BLACK BORDERS
-   ====================================== */
-#intro-video-1 {
-  object-fit: contain;   /* prevent cropping */
-  background: black;     /* visible borders */
-}
-
 
 
