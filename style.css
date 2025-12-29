@@ -13,10 +13,12 @@ video {
   inset: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
   background: black;
   z-index: -5;
+
+  object-fit: cover; /* Desktop cinematic */
 }
+
 
 /* TAP SCREEN */
 #tap-to-start {
@@ -147,3 +149,13 @@ button {
 
   /* DO NOT force display here */
 }
+
+/* ===============================
+   MOBILE RESPONSIVE VIDEO FIX
+   =============================== */
+@media (max-width: 768px) {
+  video {
+    object-fit: contain; /* No cutting on phones */
+  }
+}
+
