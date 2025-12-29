@@ -12,12 +12,14 @@ video {
   position: fixed;
   inset: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100svh; /* FIXES NAV BAR CUT */
+
   background: black;
   z-index: -5;
 
-  object-fit: cover; /* Desktop cinematic */
+  object-fit: cover; /* default cinematic */
 }
+
 
 
 /* TAP SCREEN */
@@ -158,4 +160,15 @@ button {
     object-fit: contain; /* No cutting on phones */
   }
 }
+
+/* ===============================
+   PHONE FIX — FIRST VIDEO ONLY
+   =============================== */
+@media (max-width: 768px) {
+  #intro-video-1 {
+    object-fit: contain;   /* no crop */
+    background: black;     /* intentional borders */
+  }
+}
+
 
