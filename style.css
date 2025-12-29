@@ -1,3 +1,6 @@
+/* =========================================================
+   GLOBAL BASE
+   ========================================================= */
 body {
   margin: 0;
   background: black;
@@ -7,26 +10,19 @@ body {
   overflow: hidden;
 }
 
-
-/* ===============================
-   VIDEO — RESPONSIVE & SAFE
-   =============================== */
+/* =========================================================
+   VIDEO BASE (ALL DEVICES)
+   ========================================================= */
 video {
   position: fixed;
   inset: 0;
-
-  width: 100vw;
-  height: 100dvh;            /* respects mobile nav bar */
-
-  object-fit: contain;       /* NO CROPPING ANYWHERE */
-  object-position: center;
-
   background: black;
   z-index: -5;
 }
 
-
-/* TAP SCREEN */
+/* =========================================================
+   TAP TO START SCREEN
+   ========================================================= */
 #tap-to-start {
   position: fixed;
   inset: 0;
@@ -41,15 +37,19 @@ video {
   cursor: pointer;
 }
 
-/* OVERLAY */
+/* =========================================================
+   DARK OVERLAY
+   ========================================================= */
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.65);
+  background: rgba(0, 0, 0, 0.65);
   z-index: -3;
 }
 
-/* CONTENT */
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
 #content {
   position: fixed;
   inset: 0;
@@ -57,11 +57,8 @@ video {
   justify-content: center;
   align-items: center;
   z-index: 5;
-
-  /* ADD THIS */
   visibility: hidden;
 }
-
 
 .screen {
   text-align: center;
@@ -69,24 +66,25 @@ video {
   background: rgba(0, 0, 0, 0.78);
   border: 1px solid rgba(229, 9, 20, 0.45);
   backdrop-filter: blur(6px);
-
   width: 90%;
   max-width: 420px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   animation: float 6s ease-in-out infinite;
 }
 
-
-.hidden {
-  display: none;
+/* =========================================================
+   TEXT & FORM ELEMENTS
+   ========================================================= */
+.big {
+  font-size: 30px;
 }
 
-.big { font-size: 30px; }
-.story { font-size: 17px; margin: 12px auto; }
+.story {
+  font-size: 17px;
+  margin: 12px auto;
+}
 
 input,
 button {
@@ -95,7 +93,6 @@ button {
   box-sizing: border-box;
 }
 
-
 button {
   background: #e50914;
   border: none;
@@ -103,17 +100,25 @@ button {
   cursor: pointer;
 }
 
+/* =========================================================
+   HELPERS & EFFECTS
+   ========================================================= */
+.hidden {
+  display: none;
+}
+
 .glitch {
   animation: flicker 1.4s infinite;
 }
 
 @keyframes flicker {
-  0%,100% { opacity:1; }
-  50% { opacity:0.6; }
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
 }
-/* ===============================
-   ROTATE TO LANDSCAPE (FINAL FIX)
-   =============================== */
+
+/* =========================================================
+   ROTATE TO LANDSCAPE WARNING
+   ========================================================= */
 #rotate-warning {
   position: fixed;
   inset: 0;
@@ -122,22 +127,22 @@ button {
   font-family: 'Cinzel', serif;
   font-size: 22px;
   letter-spacing: 2px;
-
   display: none;
   align-items: center;
   justify-content: center;
   text-align: center;
-
   z-index: 10000;
 }
 
-/* PHONE IN PORTRAIT */
+/* =========================================================
+   PORTRAIT MODE (PHONE)
+   ========================================================= */
 @media (orientation: portrait) {
   #rotate-warning {
     display: flex;
   }
 
-  /* FORCE HIDE EVERYTHING ELSE */
+  /* Hide everything else */
   #tap-to-start,
   video,
   #content,
@@ -147,29 +152,35 @@ button {
   }
 }
 
-/* PHONE IN LANDSCAPE */
+/* =========================================================
+   LANDSCAPE MODE (PHONE)
+   ========================================================= */
 @media (orientation: landscape) {
   #rotate-warning {
     display: none;
   }
-
-  /* DO NOT force display here */
 }
 
-/* ===============================
-   MOBILE RESPONSIVE VIDEO FIX
-   =============================== */
-/* @media (max-width: 768px) {
-  video {
-    object-fit: contain; 
-  }
-} */
+/* =========================================================
+   VIDEO FIT RULES
+   ========================================================= */
 
-/* ===============================
-   FIRST VIDEO — NEVER CROP
-   =============================== */
-/* ======================================
-   FIRST VIDEO — HORIZONTAL FIT (NO CROP)
-   ====================================== */
+/* FIRST VIDEO — NO CROP (LOGO / INTRO SAFE) */
+#intro-video-1 {
+  width: 100vw;
+  height: auto;
+  max-height: 100dvh;
+  object-fit: contain;
+  object-position: center;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
 
-
+/* OTHER VIDEOS — FULL CINEMATIC */
+video:not(#intro-video-1) {
+  width: 100vw;
+  height: 100dvh;
+  object-fit: cover;
+  object-position: center;
+}
