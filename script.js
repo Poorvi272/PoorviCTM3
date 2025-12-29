@@ -26,39 +26,13 @@ const answerInput = document.getElementById("answer");
 // QUESTION BANK
 // ===============================
 const questions = [
-  {
-    q: `Swiftly said, it sounds like a hiss,
-A helping hand you should not miss.`,
-    a: "STUDENT SUPPORT SERVICES"
-  },
-  {
-    q: `The ocean is deeper than you think.
-Decode this hint to find an academic programme at IIT Bombay.`,
-    a: "CDEEP"
-  },
-  {
-    q: `The people here know how to help you to find yourself.`,
-    a: "ID CARD OFFICE"
-  },
-  {
-    q: `I stand tall with branches that never bloom.`,
-    a: "THE KNOWLEDGE TREE"
-  },
-  {
-    q: `Dusro ki galtiyo se sikhna..`,
-    a: "GRADING STATISTICS"
-  },
-  {
-    q: `Lost Track, Probably Confused. Send Assistance.`,
-    a: "LT-PCSA"
-  },
-  {
-    q: `Tucked in a corner, far from the crowd,
-Where simplicity reigns, quiet yet proud.
-What’s the name of this welfare place,
-That fills you with warmth in its cozy space?`,
-    a: "AAHAAR WELFARE SOCIETY"
-  }
+  { q: "Swiftly said, it sounds like a hiss, a helping hand you should not miss.", a: "STUDENT SUPPORT SERVICES" },
+  { q: "The ocean is deeper than you think. decode this hint to find an academic programme at iit bombay.", a: "CDEEP" },
+  { q: "The people here know how to help you to find yourself.", a: "ID CARD OFFICE" },
+  { q: "I stand tall with branches that never bloom.", a: "THE KNOWLEDGE TREE" },
+  { q: "Dusro ki galtiyo se sikhna..", a: "GRADING STATISTICS" },
+  { q: "Lost track, probably confused. send assistance.", a: "LT-PCSA" },
+  { q: "Tucked in a corner, far from the crowd, where simplicity reigns, quiet yet proud. what’s the name of this welfare place?", a: "AAHAAR WELFARE SOCIETY" }
 ];
 
 // ===============================
