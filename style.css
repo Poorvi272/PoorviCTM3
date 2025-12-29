@@ -156,13 +156,13 @@ button {
 /* ===============================
    MOBILE RESPONSIVE VIDEO FIX
    =============================== */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   video {
-    object-fit: contain; /* No cutting on phones */
+    object-fit: contain; 
   }
-}
+} */
 
-/* /* ===============================
+/* ===============================
    PHONE FIX — FIRST VIDEO ONLY
    =============================== */
 @media (max-width: 768px) {
@@ -170,7 +170,7 @@ button {
     object-fit: contain;   /* no crop */
     background: black;     /* intentional borders */
   }
-} */
+}
 
 
 
