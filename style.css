@@ -7,20 +7,23 @@ body {
   overflow: hidden;
 }
 
-/* VIDEOS */
+
 /* ===============================
-   VIDEO BASE (ALL DEVICES)
-   =============================== */
-/* ===============================
-   VIDEO BASE (ALL DEVICES)
+   VIDEO — RESPONSIVE & SAFE
    =============================== */
 video {
   position: fixed;
   inset: 0;
+
+  width: 100vw;
+  height: 100dvh;            /* respects mobile nav bar */
+
+  object-fit: contain;       /* NO CROPPING ANYWHERE */
+  object-position: center;
+
   background: black;
   z-index: -5;
 }
-
 
 
 /* TAP SCREEN */
@@ -168,26 +171,5 @@ button {
 /* ======================================
    FIRST VIDEO — HORIZONTAL FIT (NO CROP)
    ====================================== */
-#intro-video-1 {
-  width: 100vw;          /* fit by width */
-  height: auto;          /* let height scale */
-  max-height: 100dvh;    /* never overflow screen */
 
-  object-fit: contain;   /* no crop */
-  object-position: center;
-
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
-}
-
-/* ======================================
-   OTHER VIDEOS — FULLSCREEN CINEMATIC
-   ====================================== */
-video:not(#intro-video-1) {
-  width: 100vw;
-  height: 100dvh;
-  object-fit: cover;
-  object-position: center;
-}
 
