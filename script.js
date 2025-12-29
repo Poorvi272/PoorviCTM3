@@ -26,10 +26,16 @@ const answerInput = document.getElementById("answer");
 // QUESTION BANK
 // ===============================
 const questions = [
-  { q: "Swiftly said, it sounds like a hiss, A helping hand you should not miss.", a: "Student Support Services" },
-  { q: `“The ocean is deeper than you think.”
+  {
+    q: `Swiftly said, it sounds like a hiss,
+A helping hand you should not miss.`,
+    a: "STUDENT SUPPORT SERVICES"
+  },
+  {
+    q: `The ocean is deeper than you think.
 Decode this hint to find an academic programme at IIT Bombay.`,
-    a: "CDEEP"}
+    a: "CDEEP"
+  },
   {
     q: `The people here know how to help you to find yourself.`,
     a: "ID CARD OFFICE"
@@ -39,7 +45,7 @@ Decode this hint to find an academic programme at IIT Bombay.`,
     a: "THE KNOWLEDGE TREE"
   },
   {
-    q: `“Dusro ki galtiyo se sikhna..”`,
+    q: `Dusro ki galtiyo se sikhna..`,
     a: "GRADING STATISTICS"
   },
   {
@@ -53,8 +59,6 @@ What’s the name of this welfare place,
 That fills you with warmth in its cozy space?`,
     a: "AAHAAR WELFARE SOCIETY"
   }
-
-  
 ];
 
 // ===============================
