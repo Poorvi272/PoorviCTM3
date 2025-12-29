@@ -8,18 +8,17 @@ body {
 }
 
 /* VIDEOS */
+/* ===============================
+   VIDEO BASE (ALL DEVICES)
+   =============================== */
 video {
   position: fixed;
   inset: 0;
   width: 100vw;
-
-  /* IMPORTANT: dynamic viewport */
-  height: 100dvh;
-
+  height: 100dvh;        /* dynamic viewport, safe */
   background: black;
   z-index: -5;
 }
-
 
 
 
@@ -162,12 +161,18 @@ button {
   }
 } */
 
+/* ===============================
+   FIRST VIDEO — NEVER CROP
+   =============================== */
 #intro-video-1 {
-  object-fit: contain;   /* NO CROP */
+  object-fit: contain;     /* no crop on laptop or phone */
   object-position: center;
   background: black;
 }
 
+/* ===============================
+   ALL OTHER VIDEOS — CINEMATIC
+   =============================== */
 video:not(#intro-video-1) {
   object-fit: cover;
   object-position: center;
