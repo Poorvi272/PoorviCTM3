@@ -194,11 +194,12 @@ video:not(#intro-video-1) {
    FINAL SCREEN LOGO
    =============================== */
 .final-logo {
-  width: 180px;
-  max-width: 70%;
-  margin: 10px 0 6px;
-  filter: drop-shadow(0 0 10px rgba(229,9,20,0.6));
+  width: 260px;        /* BIGGER SIZE */
+  max-width: 85%;
+  margin: 14px 0 10px;
+  filter: drop-shadow(0 0 14px rgba(229,9,20,0.7));
 }
+
 
 /* ===============================
    REGISTER BUTTON
