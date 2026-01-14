@@ -31,7 +31,7 @@ const questions = [
   { q: "The people here know how to help you to find yourself.", a: "ID CARD OFFICE" },
   { q: "I stand tall with branches that never bloom.", a: "THE KNOWLEDGE TREE" },
   { q: "Dusro ki galtiyo se sikhna..", a: "GRADING STATISTICS" },
-  { q: "Lost track, probably confused. send assistance.", a: "LT-PCSA" },
+  { q: "Lost track, probably confused. send assistance.", a: "LTPCSA" },
 ];
 
 // ===============================
