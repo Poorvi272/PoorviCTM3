@@ -32,7 +32,6 @@ const questions = [
   { q: "I stand tall with branches that never bloom.", a: "THE KNOWLEDGE TREE" },
   { q: "Dusro ki galtiyo se sikhna..", a: "GRADING STATISTICS" },
   { q: "Lost track, probably confused. send assistance.", a: "LT-PCSA" },
-  { q: "Tucked in a corner, far from the crowd, where simplicity reigns, quiet yet proud. what’s the name of this welfare place?", a: "AAHAAR WELFARE SOCIETY" }
 ];
 
 // ===============================
